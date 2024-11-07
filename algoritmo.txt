@@ -1,0 +1,10 @@
+Algoritmo calculadora de gastos mensuales
+1. iniciar
+2. Inicializar un diccionario vacío para almacenar los gastos por categoría. 
+3. Solicitar al usuario el monto y la categoría de un gasto. 
+4. Preguntar al usuario si desea ingresar otro gasto:
+      * Si la respuesta es "sí", repetir el paso 2.
+      * Si la respuesta es "no", continuar al paso 4.
+5. Mostrar los gastos totales por cada categoría.
+6. Calcular y mostrar el gasto total general.
+7. finalizar 

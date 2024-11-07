@@ -1,0 +1,47 @@
+program_para_calculadora_de_gatos_mensuales
+STAR
+
+    // Declarar una estructura de datos para almacenar los gastos por categoría
+    Crear un diccionario vacío 'gastos_categoria' para almacenar las categorías y montos
+
+    // Variable para el cálculo del gasto total
+    Definir total_general = 0
+
+    // Repetir mientras el usuario quiera ingresar más gastos
+    REPETIR
+        // Solicitar el monto del gasto
+        ESCRIBIR "Introduce el monto del gasto:"
+        Leer monto
+
+        // Solicitar la categoría del gasto
+        ESCRIBIR "Introduce la categoría del gasto:"
+        Aprender categorías
+
+        // Verificar si la categoría ya existe en el diccionario
+        SI categoría existe en gastos_categoria ENTONCES
+            // Si existe, sumar el monto al total de esa categoría
+            gastos_categoria[categoria] = gastos_categoria[categoria] + monto
+        SINO
+            // Si no existe, crear una nueva categoría con el monto
+            gastos_categoria[categoria] = monto
+         FIN SI
+
+        // Preguntar al usuario si desea agregar otro gasto
+        ESCRIBIR "¿Deseas agregar otro gasto? (sí/no):"
+        Leer respuesta
+
+    HASTA que respuesta sea "no"
+
+    // Calcular el total general de todos los gastos
+    total_general = 0
+    PARA CADA categoría EN gastos_categoria HACER
+        DESCRIBIR "Total en " + categoría + ": $" + gastos_categoria[categoría]
+        total_general = total_general + gastos_categoria[categoria]
+    FIN PARA
+
+    // Mostrar el gasto total
+    ESCRIBA "Gasto total: $" + total_general
+
+END
+
+FIN
